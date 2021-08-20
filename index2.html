@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+</style>
+<body>
+  
+    <div class="nav-center">
+        <h4>color flipper</h4>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">simple</a>
+            </li>
+              <li>
+                <a href="hex.html">Hex</a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="container">
+            <h2>Background color: <span class="color">
+                #f1f5f8
+            </span></h2>
+            <button class="btn btn-hero" id="btn">click me</button>
+
+        </div>
+    </main>
+<script>
+    const colors = ["green","red","yellow"];
+
+    const btn = document.getElementById("btn");
+    const color =document.querySelector(".color");
+    
+    btn.addEventListener('click',function(){
+    console.log(document.body);
+     const randomNmuber=getRandomnumber();
+        console.log(randomNmuber);
+            document.body.style.backgroundColor = colors[randomNmuber];
+    color.textContent=colors[randomNmuber];
+     // for(let i=0;i<=3;i++){
+    // randomNmuber =randomNmuber+ Math.round(Math.random()*3);
+    // }
+    // console.log(randomNmuber);
+})
+function getRandomnumber(){
+    return Math.floor(Math.random()*colors.length);
+}
+    
+</script>
+
+</body>
+</html>
